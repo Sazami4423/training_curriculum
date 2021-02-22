@@ -10,6 +10,10 @@ class CalendarsController < ApplicationController
   def create
     Plan.create(plan_params)
     redirect_to action: :index
+    rescue => exception
+      
+    end
+    # redirect_to action: :index
   end
 
   private
@@ -44,5 +48,5 @@ class CalendarsController < ApplicationController
       @week_days.push(days)
     end
 
-  end
+  # end
 end
